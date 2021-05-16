@@ -41,12 +41,13 @@ server.get("/jokes/:id", (req, res) => {
   const id = +req.params.id;
 
   const [joke] = jkList.filter((joke) => joke.id === id);
-  res.send(joke);
+  res.status(200).send(joke);
 });
 
 server.get("/jokes/random", (req, res) => {
   const randomJoke = randomItem(jkList);
-  res.send(randomJoke);
+  res.status(200).send(randomJoke);
 });
 
-server.listen(5500);
+
+server.listen(4000);

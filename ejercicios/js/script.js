@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   });
 
 const loadData = () => {
-    fetch("http://localhost:5500/random")
+    fetch("http://localhost:4000/random")
       .then((response) => response.json())
       .then((randomJoke) => {
         const container = document.querySelector("#jkList");
